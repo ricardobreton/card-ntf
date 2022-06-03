@@ -1,0 +1,209 @@
+:root {
+  --softblue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+  --verydarkbluemainBG: hsl(217, 54%, 11%);
+  --verydarkbluecardBG: hsl(216, 50%, 16%);
+  --verydarkblueline: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+  --fuentePrimaria:'Outfit', sans-serif;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: var(--verydarkbluemainBG);
+    font-family: var(--fuentePrimaria);
+    font-size: 1.8rem;
+    line-height: 1.3;
+  }
+
+/** Globales **/
+
+h1, h2, h3 {
+    font-weight: 600;
+    margin: 2rem 0;
+}
+
+h1 {
+    font-size: 2.2rem;
+}
+h2 {
+    font-size: 2rem;
+}
+h3 {
+    font-size: 1.8rem;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    height: auto;
+}
+a {
+    text-decoration: none;
+    color: var(--white)
+}
+a:hover{
+    color: var(--cyan);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+.card {
+    width: 90%;
+    max-width: 29rem;
+    border-radius: 1rem;
+    margin: 5rem auto;
+    background-color: var(--verydarkbluecardBG);
+    box-shadow: 0px 0px 50px 10px hsl(217, 54%, 11%)
+}
+@media (min-width: 375px) { 
+    .card {
+        max-width: 34rem;
+        margin: 8rem auto;
+    }
+    
+}
+@media (min-width: 1440px) { 
+    .card {
+        margin: 10rem auto;
+    }
+}
+.card-body {
+    padding: 2rem;
+}
+
+.card-body p {
+    color: var(--softblue);
+}
+/*.imagen {
+    max-width: 100%;
+    background-color: var(--cyan);
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 1.3rem;    
+}
+.imagen img {
+    border-radius: 1rem;
+}
+.imagen img:hover{
+    opacity: .4;
+
+}*/
+.imagen {
+    max-height: 25rem;
+    position: relative;
+}
+@media (min-width: 375px) { 
+    .imagen {
+        max-height: 30rem;
+    }
+}
+.imagen img{
+    border-radius: 1rem;
+    max-height: 25rem;
+}
+@media (min-width: 375px) { 
+    .imagen img{
+        max-height: 30rem;
+    }
+}
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.imagen:hover .overlay {
+    background: var(--cyan);
+    opacity:.5;
+    border-radius: 1rem;
+}
+.boton {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.imagen:hover .boton {
+    background-image: url(../images/icon-view.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity:1;
+    cursor: pointer;
+}
+
+.foot-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--softblue);
+    font-weight: 300;
+}
+.etherium {
+    display: flex;
+    align-items: flex-start;
+    color: var(--cyan);
+
+}
+
+.etherium::before {
+    content: "";
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    background-image: url(../images/icon-ethereum.svg);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: 1.2rem;
+    padding-right: 3rem;
+
+  }
+
+.fecha {
+    display: flex;
+    align-items: center;
+    color: var(--softblue);
+}
+.fecha::before {
+    content: "";
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    background-image: url(../images/icon-clock.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 2rem;
+    padding-right: 3rem;
+  }
+.creador {
+    display: flex;
+    padding: 2rem 0 0 0;
+    font-weight: 300;
+}
+.creador img {
+    height: 4rem;
+    width: 4rem;
+    margin-top: 1rem;
+    border-radius: 4rem;
+    border: 2px solid var(--white);
+}
+.creador p {
+    margin-left: 2rem;
+}
